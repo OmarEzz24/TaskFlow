@@ -1,0 +1,380 @@
+/* =========================
+   1. Global Styles
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   2. Main Container
+========================= */
+
+.app {
+  width: 90%;
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #1e293b;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   3. Header
+========================= */
+
+.app h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 15px;
+}
+
+.app > p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+/* =========================
+   4. Statistics
+========================= */
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 20px;
+  background: #0f172a;
+border: 1px solid #334155;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.06);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  color: #4f46e5;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* =========================
+   5. Add Task
+========================= */
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.add-task input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  outline: none;
+  background: #0f172a;
+color: #f1f5f9;
+border: 1px solid #475569;
+}
+
+.add-task input:focus,
+.edit-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.add-task button {
+  padding: 14px 22px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.add-task button:hover {
+  background: #4338ca;
+}
+
+/* =========================
+   6. Filters
+========================= */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.filters button {
+  padding: 9px 17px;
+  background: #334155;
+color: #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.filters button:hover {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.filters button.active {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+/* =========================
+   7. Tasks List
+========================= */
+
+.tasks-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #0f172a;
+border: 1px solid #334155;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.task-title {
+  flex: 1;
+  min-width: 100px;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* =========================
+   8. Edit Input
+========================= */
+
+.edit-input {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+  
+  border-radius: 8px;
+  outline: none;
+  background: #0f172a;
+color: #f1f5f9;
+border: 1px solid #475569;
+}
+
+/* =========================
+   9. Task Actions
+========================= */
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.task-actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.task-actions button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.96);
+}
+
+.complete-btn {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.edit-btn {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.save-btn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.cancel-btn {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+/* =========================
+   10. Empty State
+========================= */
+
+.empty-state {
+  text-align: center;
+  padding: 35px 15px;
+  background: #0f172a;
+border: 1px dashed #475569;
+  border-radius: 12px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   11. Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+  .app {
+    width: 94%;
+    margin: 20px auto;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .app h1 {
+    font-size: 27px;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 15px 8px;
+  }
+
+  .stat-card h3 {
+    font-size: 23px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+
+  .add-task {
+    gap: 7px;
+  }
+
+  .add-task input {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .add-task button {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .task-item {
+    gap: 8px;
+    padding: 12px 9px;
+  }
+
+  .task-title {
+    font-size: 14px;
+  }
+
+  .task-actions {
+    width: 100%;
+  }
+
+  .task-actions button {
+    flex: 1;
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats {
+    gap: 6px;
+  }
+
+  .stat-card {
+    padding: 12px 5px;
+  }
+
+  .stat-card h3 {
+    font-size: 20px;
+  }
+
+  .add-task {
+    flex-direction: column;
+  }
+
+  .add-task button {
+    width: 100%;
+  }
+}
