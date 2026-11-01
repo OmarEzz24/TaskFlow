@@ -1,16 +1,68 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TaskFlow – Task Management App
 
-Currently, two official plugins are available:
+A modern and responsive task management application built with React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[View TaskFlow](https://omarezz24.github.io/TaskFlow/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Add new tasks.
+- Delete tasks.
+- Mark tasks as completed or undo completion.
+- Edit existing tasks.
+- Filter tasks by All, Active, and Completed.
+- Track task statistics.
+- Save tasks using LocalStorage.
+- Responsive design for different screen sizes.
+- Modern Dark Theme.
+- Keyboard shortcuts:
+- Enter to add or save a task.
+- Escape to cancel editing.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+
+- React
+- JavaScript
+- CSS3
+- Vite
+- LocalStorage
+- Git & GitHub
+
+## Run Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/OmarEzz24/TaskFlow.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd TaskFlow
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL provided by Vite.
+
+## Project Status
+
+Completed – First React Project.
+
+---
+
+Built with ❤️ using React.
